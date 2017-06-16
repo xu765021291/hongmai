@@ -42,11 +42,11 @@ $(function(){
     var liArr = boxx.getElementsByClassName("l");
     var spanArr = boxx.getElementsByClassName("sple");
 
-
+        
     for (var i = 0; i < liArr.length; i++) {
-
+        liArr[i].index=i;
         liArr[i].onclick = function () {
-            count = this.innerHTML - 1;
+            count = this.index;
             fn();
 
         }
@@ -93,7 +93,7 @@ $(function(){
         if (count === 3) {
             count = 0;
         }
-        fn()
+        fn();
     }
 
 
@@ -111,9 +111,9 @@ $(function(){
 
 
     for (var i = 0; i < liAr.length; i++) {
-
+        liAr[i].index=i;
         liAr[i].onclick = function () {
-            coun = this.innerHTML - 1;
+            coun = this.index;
             fn2();
 
         }
@@ -160,7 +160,7 @@ $(function(){
         if (coun === 4) {
             coun = 0;
         }
-        fn2()
+        fn2();
 
     }
 
